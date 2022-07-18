@@ -1,2 +1,3 @@
 # AirportSPA
-SPA based on Vladilen Minin livecoding
+
+React, TypeScript, Redux-Toolkit, Tailwind
