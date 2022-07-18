@@ -1,3 +1,6 @@
 # AirportSPA
 
-React, TypeScript, Redux-Toolkit, Tailwind
+- React
+- TypeScript
+- Redux-Toolkit
+- Tailwind
