@@ -5,8 +5,12 @@ import './nav.sass'
 export function Nav() {
   return (
     <nav className="nav">
-      Airport
-      <Link to="/auth">Auth</Link>
+      <Link className="nav__link" to="/auth">
+        Auth
+      </Link>
+      <Link className="nav__link" to="/airport/1">
+        Airport
+      </Link>
     </nav>
   )
 }
