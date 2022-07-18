@@ -3,4 +3,8 @@
 - React
 - TypeScript
 - Redux-Toolkit
-- Tailwind
+- ~~Tailwind~~
+- SASS
+- EsLint, Pretier, AutoFix
+
+todo: add link on youtube
