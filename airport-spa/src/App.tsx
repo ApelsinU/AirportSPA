@@ -3,10 +3,10 @@ import './styles/reset.sass'
 import './styles/page-wrapper.sass'
 
 import { Routes, Route } from 'react-router-dom'
-import { MainPage } from './pages/MainPage'
-import { AuthPage } from './pages/AuthPage'
-import { AirportDetailPage } from './pages/AirportDetailPage'
-import { Nav } from './components/Nav'
+import { MainPage } from './pages/MainPage/MainPage'
+import { AuthPage } from './pages/AuthPage/AuthPage'
+import { UserDetailPage } from './pages/UserDetailPage/UserDetailPage'
+import { Nav } from './components/Nav/Nav'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/auth" element={<AuthPage />} />
-        <Route path="/airport/:id" element={<AirportDetailPage />} />
+        <Route path="/airport/:id" element={<UserDetailPage />} />
       </Routes>
     </div>
   )
