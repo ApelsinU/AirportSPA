@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  max-width: 1230px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.nav__link {
+  font-size: 22px;
+  padding: 5px 10px;
+}
+.nav__link:hover {
+  color: #333;
+}
+
+/*# sourceMappingURL=nav.css.map */

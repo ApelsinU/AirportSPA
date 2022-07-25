@@ -7,4 +7,7 @@
 - SASS
 - EsLint, Pretier, AutoFix
 
-todo: add link on youtube
+todo:
+- add link on youtube
+- fix stylelint
+- fix tailwind
