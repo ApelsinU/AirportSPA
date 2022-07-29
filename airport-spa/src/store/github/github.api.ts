@@ -14,6 +14,9 @@ export const githubApi = createApi({
         },
       }),
     }),
+    searchRepos: build.query<any, string>({
+      query: (name) => `repos/${name}`,
+    }),
     /*    searchRepos: build.query<any, string>({
       query: (searchReps: string) => ({
         url: 'repos',
@@ -26,5 +29,6 @@ export const githubApi = createApi({
 })
 
 export const { useSearchUsersQuery } = githubApi
+export const { useSearchReposQuery } = githubApi
 
 // repos{?type,page,per_page,sort}

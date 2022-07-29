@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import './repositories-search.sass'
-import { useSearchUsersQuery } from '../../store/github/github.api'
+import { useSearchReposQuery } from '../../store/github/github.api'
 import { useDataWatcher } from '../../hooks/dataWatcher'
 
 export function RepositoriesSearch() {
   const [search, setSearch] = useState('')
   const dataWatcher = useDataWatcher(search)
 
-  const { data, isError } = useSearchUsersQuery(dataWatcher, {
+  const { data: repos, isError } = useSearchReposQuery(dataWatcher, {
     skip: dataWatcher.length < 3,
   })
 
   useEffect(() => {
     console.log('search', search)
   }, [dataWatcher])
-
-  console.log('repo', data)
 
   return (
     <div>
@@ -33,12 +31,14 @@ export function RepositoriesSearch() {
       </label>
       <h3>All {search} repositories</h3>
       <div>
-        {!!data?.length &&
-          data.map((repo) => {
+        {!!repos?.length &&
+          repos.map((repo) => {
             return (
               <div key={repo.id}>
                 <p>{repo.name}</p>
-                <a href={repo.url}>{repo.url}</a>
+                <a href={repo.url} target="_blank" rel="noreferrer">
+                  {repo.url}
+                </a>
               </div>
             )
           })}
